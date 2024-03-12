@@ -8,6 +8,7 @@
   outline: 2px rgb(0, 26, 255) dotted;
 } */
 
+/* NOTE Initial Variables for the project. Variables can be all sorts of values that you want to re-use */
 :root {
   --page: #fff6f0;
   --light: #f5f5f5;
@@ -23,6 +24,7 @@ body {
   background-color: var(--page);
   margin: unset;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* NOTE to get our page to fill out vertically, we turned the body into a flex container with the column direction, and 100vh, then applied our '.grow' rule to the main, so it would grow into the rest of the space*/
   display: flex;
   flex-direction: column;
   height: 100dvh;
@@ -30,6 +32,7 @@ body {
   /* you can also use vw, dvw for view width, even though this is far less common in use */
 }
 
+/* NOTE unset can be used to remove the styles that the browser applies automatically to certain elements. Or you can apply your own style to overwrite it */
 button {
   background-color: unset;
   border: unset;
@@ -39,6 +42,7 @@ button {
 }
 
 header {
+  /* NOTE margin is invisible space on the outside of an element, padding is invisible space on the inside of elements */
   margin: 15px;
   margin-left: var(--page-x-margin);
   margin-right: var(--page-x-margin);
@@ -53,6 +57,7 @@ header {
   width: 75%;
 }
 
+/* NOTE different ways to create more specificity */
 .nav-links>.active-link {
   color: var(--primary);
   text-decoration: underline;
@@ -86,6 +91,7 @@ main {
 
 main>section {
   /* NOTE quick margins */
+  /* first value is the Y (top,bottom) second value is X (left, right)*/
   margin: 0px 10px;
 }
 
@@ -115,8 +121,6 @@ img {
   border-radius: 100px;
 }
 
-
-
 footer {
   color: var(--light);
   background-color: var(--dark);
@@ -129,6 +133,7 @@ footer {
 
 
 
+/* NOTE the classes below are what we consider "utility" classes, or classes that have only one or two, properties in their rule that can be combined for a desired effect */
 .display-flex {
   display: flex;
 }
